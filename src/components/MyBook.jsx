@@ -32,7 +32,7 @@ const Page2 = React.forwardRef((props, ref2) => {
         <div className="demoPage p-5 md:p-12 bg-gradient-to-r to-[#d6bb72] from-[#ead086]" ref={ref2}>
             <h2 className="font-black text-4xl text-red-800">El ilícito</h2>
             <h3 className="text-xl md:text-2xl font-semibold mt-2">{props.crime}</h3>
-            <div className="text-md md:text-lg mt-2 font-semibold">{props.children}</div>
+            <div className="text-md md:text-lg mt-2 font-semibold flex flex-col gap-5">{props.children}</div>
             <p className="absolute bottom-2 right-3">{props.number}</p>
         </div>
     );
