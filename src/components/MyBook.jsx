@@ -53,8 +53,8 @@ function MyBook(props) {
     useEffect(() => {
         const handleResize = () => {
             setSize({
-                width: window.innerWidth > 600 ? 600 : window.innerWidth - 50,
-                height: window.innerWidth > 600 ? 750 : window.innerHeight - 200
+                width: window.innerWidth > 600 ? 450 : window.innerWidth - 50,
+                height: window.innerWidth > 600 ? 600 : window.innerHeight - 200
             });
         };
 
