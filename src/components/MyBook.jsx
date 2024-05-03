@@ -22,7 +22,7 @@ const Page1 = React.forwardRef((props, ref) => {
                 <h3 className="text-2xl md:text-3xl font-bold mt-2 text-red-800">{props.character}</h3>
                 <h4 className="text-lg md:text-xl mt-2"><span className="font-bold">Cargo: </span>{props.position}</h4>
                 <h4 className="text-lg md:text-xl mt-2"><span className="font-bold">Condena: </span>{props.sentence}</h4>
-                <h4 className="text-lg md:text-xl mt-2"><span className="font-bold">Debe al pueblo: </span><span className="text-xl font-black text-yellow-800 md:text-3xl"> {props.dept}</span></h4>
+                <h4 className="text-lg md:text-xl mt-2"><span className="font-bold">Debe: </span><span className="text-xl font-black text-yellow-800 md:text-3xl"> {props.dept}</span></h4>
             </div>
         </div>
     );
@@ -31,8 +31,8 @@ const Page2 = React.forwardRef((props, ref2) => {
     return (
         <div className="demoPage p-5 md:p-12 bg-gradient-to-r to-[#d6bb72] from-[#ead086]" ref={ref2}>
             <h2 className="font-black text-4xl text-red-800">El lícito</h2>
-            <h3 className="text-2xl font-semibold mt-2">{props.crime}</h3>
-            <div className="text-lg mt-2">{props.children}</div>
+            <h3 className="text-xl md:text-2xl font-semibold mt-2">{props.crime}</h3>
+            <div className="text-md md:text-lg mt-2">{props.children}</div>
             <p className="absolute bottom-2 right-3">{props.number}</p>
         </div>
     );
