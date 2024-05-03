@@ -20,9 +20,9 @@ const Page1 = React.forwardRef((props, ref) => {
             <img src={props.img} alt="" className="w-full aspect-video object-cover mt-3" />
             <div className="flex flex-col gap-2">
                 <h3 className="text-2xl md:text-3xl font-bold mt-2 text-red-800">{props.character}</h3>
-                <h4 className="text-lg md:text-xl mt-2"><span className="font-bold">Cargo: </span>{props.position}</h4>
-                <h4 className="text-lg md:text-xl mt-2"><span className="font-bold">Condena: </span>{props.sentence}</h4>
-                <h4 className="text-lg md:text-xl mt-2"><span className="font-bold">Debe: </span><span className="text-xl font-black text-yellow-800 md:text-3xl"> {props.dept}</span></h4>
+                <h4 className="text-lg md:text-xl font-semibold mt-2"><span className="font-bold">Cargo: </span>{props.position}</h4>
+                <h4 className="text-lg md:text-xl font-semibold mt-2"><span className="font-bold">Condena: </span>{props.sentence}</h4>
+                <h4 className="text-lg md:text-xl font-semibold mt-2"><span className="font-bold">Debe: </span><span className="text-xl font-black text-yellow-800 md:text-3xl"> {props.dept}</span></h4>
             </div>
         </div>
     );
@@ -30,9 +30,9 @@ const Page1 = React.forwardRef((props, ref) => {
 const Page2 = React.forwardRef((props, ref2) => {
     return (
         <div className="demoPage p-5 md:p-12 bg-gradient-to-r to-[#d6bb72] from-[#ead086]" ref={ref2}>
-            <h2 className="font-black text-4xl text-red-800">El lícito</h2>
+            <h2 className="font-black text-4xl text-red-800">El ilícito</h2>
             <h3 className="text-xl md:text-2xl font-semibold mt-2">{props.crime}</h3>
-            <div className="text-md md:text-lg mt-2">{props.children}</div>
+            <div className="text-md md:text-lg mt-2 font-semibold">{props.children}</div>
             <p className="absolute bottom-2 right-3">{props.number}</p>
         </div>
     );
@@ -83,21 +83,9 @@ function MyBook(props) {
                     <br />
                     <p className="text-lg font-gray-800">En este capítulo:
                         <br />
-                        <span className="font-bold">Luis Adrian Ruiz</span> y <span className="font-bold">José Luis Benito</span>
+                        <span className="font-bold">José Luis Benito</span> y <span className="font-bold">Luis Adrian Ruiz</span>
                     </p>
                 </Page3>
-
-                {/* Luis Adrian Ruiz */}
-                <Page1 img={CondenaLuisAdrian} character="Luis Adrian Ruiz" sin="Capítulo 1: Avaricia" position="Ex-Presidente" sentence="Exilio" dept="MUCHO DINERO" />
-                <Page2 crime="Actos de Corrupción">
-                    <p>
-                        En epocas de Sinibaldi y el Partido Patriota fue destituido como vice ministro sindicado en actos de lavado cuando fue sorprendido cobrando coimas a contratistas.
-                    </p>
-                    <h3 className="text-2xl mt-6 font-semibold">Narrativa</h3>
-                    <p>
-                        El oscuro pacto de Luis Adrian Ruiz le otorgó riquezas incontables, desviando fondos públicos para su beneficio personal, manchando su alma con la avaricia más vil.
-                    </p>
-                </Page2>
 
                 {/* José Luis Benito */}
                 <Page1 img={CondenaJose} character="José Luis Benito" sin="Capítulo 1: Avaricia" position="Ex-Ministro de Comunicaciones" sentence="2 años de cárcel" dept="Q122.000.000" />
@@ -105,9 +93,19 @@ function MyBook(props) {
                     <p>
                         Exministro José Luis Benito es condenado a 2 años de cárcel por caso de maletas con Q122 millones
                     </p>
-                    <h3 className="text-2xl mt-6 font-semibold">Narrativa</h3>
                     <p>
                         Las manos de José Luis Benito quedaron impregnadas con la codicia, al permitir el flujo siniestro de dinero malhabido, mientras su conciencia se ahogaba en un mar de lamentos y riquezas ilícitas.
+                    </p>
+                </Page2>
+
+                      {/* Luis Adrian Ruiz */}
+                      <Page1 img={CondenaLuisAdrian} character="Luis Adrian Ruiz" sin="Capítulo 1: Avaricia" position="Ex-Presidente" sentence="Exilio" dept="MUCHO DINERO" />
+                <Page2 crime="Actos de Corrupción">
+                    <p>
+                        En epocas de Sinibaldi y el Partido Patriota fue destituido como vice ministro sindicado en actos de lavado cuando fue sorprendido cobrando coimas a contratistas.
+                    </p>
+                    <p>
+                        El oscuro pacto de Luis Adrian Ruiz le otorgó riquezas incontables, desviando fondos públicos para su beneficio personal, manchando su alma con la avaricia más vil.
                     </p>
                 </Page2>
 
@@ -128,7 +126,6 @@ function MyBook(props) {
                 <Page1 img={CondenaOtto} character="Otto Pérez Molina" sin="Capítulo 2: Soberbia" position="Político y Ex-Militar" sentence="16 años de cárcel" dept="USD3.500.000" />
                 <Page2 crime="Fraude y Corrupción">
                     <p>Pérez Molina fue sentenciado a 16 años de prisión en diciembre de 2022 tras comprobarse que conformaba una red criminal que defraudó al Estado por al menos 3,5 millones de dólares en el caso conocido como La Línea</p>
-                    <h3 className="text-2xl mt-6 font-semibold">Narrativa</h3>
                     <p>
                         La arrogancia de Otto Pérez Molina lo llevó a creerse intocable, mientras tejía una red de engaños y deshonestidades que finalmente lo sumergieron en un abismo de condena eterna.
                     </p>
@@ -153,7 +150,6 @@ function MyBook(props) {
                     <p>
                         La Sala Segunda de Mayor Riesgo confirmó la sentencia de 15 años de cárcel contra la exvicepresidenta Roxana Baldetti, quien fue encontrada culpable, en 2018, de haber sido parte de una organización criminal que estafó al Estado por Q22.8 millones.
                     </p>
-                    <h3 className="text-2xl mt-6 font-semibold">Narrativa</h3>
                     <p>
                         Los deseos lujuriosos de Roxana Baldetti la arrastraron hacia un abismo de engaños y corrupción, manchando su alma con el peso de sus depravadas acciones y llevándola hacia un destino de condena sin fin.
                     </p>
@@ -178,7 +174,6 @@ function MyBook(props) {
                     <p>
                         Giammattei recibió dinero para la concesión de un puerto en el Caribe / EE.UU. lo acusa de corrupción tres días después de que dejara el cargo y le prohíbe la entrada al país
                     </p>
-                    <h3 className="text-2xl mt-6 font-semibold">Narrativa</h3>
                     <p>
                         La envidia consumió el alma de Alejandro Giammattei, quien cegado por su deseo de poder y riquezas, selló su destino con actos de corrupción que lo llevaron al abismo del exilio y la eterna condena.
                     </p>
@@ -203,7 +198,6 @@ function MyBook(props) {
                     <p>
                         El exsecretario de la vicepresidencia fue declarado culpable en dos casos de corrupción durante el Gobierno del extinto Partido Patriota.
                     </p>
-                    <h3 className="text-2xl mt-6 font-semibold">Narrativa</h3>
                     <p>
                         La pereza de Juan Carlos Monzón Rojas lo llevó por el sendero de la corrupción y el engaño, sembrando caos y desdicha en su camino, mientras su alma se consumía en la oscuridad de sus malas acciones.
                     </p>
@@ -228,7 +222,6 @@ function MyBook(props) {
                     <p>
                         El exministro de Economía, Acisclo Valladares Urruela, reconoció haber usado el sistema bancario de Estados Unidos para hacer transacciones que terminaron en sobornos
                     </p>
-                    <h3 className="text-2xl mt-6 font-semibold">Narrativa</h3>
                     <p>
                         La ira consumió el corazón de Acisclo Valladares Urruela, llevándolo por el camino de la corrupción y la traición, sellando su destino con la marca de la condena eterna.
                     </p>
@@ -253,7 +246,6 @@ function MyBook(props) {
                     <p>
                         El exdiputado Julio Antonio Juárez Ramírez sería, según la fiscalía, el autor intelectual del asesinato del periodista Danilo Efraín Zapón López.
                     </p>
-                    <h3 className="text-2xl mt-6 font-semibold">Narrativa</h3>
                     <p>
                         El miedo fue su herramienta, y la corrupción su aliada. Julio Antonio Juárez Ramírez, con su alma manchada de oscuridad, sumió a su pueblo en el temor y la violencia, sellando su destino con la condena de una vida entera.
                     </p>
