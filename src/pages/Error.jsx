@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Error = () => {
     return (
@@ -11,6 +12,8 @@ const Error = () => {
                     Pecado no encontrado
                 </h1>
             </div>
+            <Link to="/" className="hover:text-yellow-500 mt-5 w-fit transition text-yellow-700 relative z-50 font-black font-cinzel tracking-wide md:text-3xl mx-auto text-2xl text-center"
+            >Volver</Link>
         </div>
     )
 }
