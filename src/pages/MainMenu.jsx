@@ -18,11 +18,12 @@ const MainMenu = () => {
             const tl = gsap.timeline();
 
             tl
-                
+
                 .from(circle.current, {
                     scale: 0,
                     ease: "back",
                     duration: 1,
+                    delay: 0.2,
                 })
                 .from(diabloRef.current, {
                     opacity: 0,
